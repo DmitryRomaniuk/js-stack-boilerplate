@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react'
+import React from 'react';
 
 type Props = {
   label: string,
@@ -13,6 +13,6 @@ const Button = ({ label, handleClick }: Props) =>
     className="btn btn-primary"
     type="button"
     role="button"
-  >{label}</button>
+  >{label}</button>;
 
-export default Button
+export default Button;

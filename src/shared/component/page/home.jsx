@@ -1,11 +1,11 @@
 // @flow
 
-import React from 'react'
-import Helmet from 'react-helmet'
-import injectSheet from 'react-jss'
+import React from 'react';
+import Helmet from 'react-helmet';
+import injectSheet from 'react-jss';
 
-import ModalExample from '../modal-example'
-import { APP_NAME } from '../../config'
+import ModalExample from '../modal-example';
+import { APP_NAME } from '../../config';
 
 const styles = {
   hoverMe: {
@@ -22,7 +22,7 @@ const styles = {
     composes: ['btn', 'btn-primary'],
     backgroundColor: 'limegreen',
   },
-}
+};
 
 const HomePage = ({ classes }: { classes: Object }) =>
   <div>
@@ -58,6 +58,6 @@ const HomePage = ({ classes }: { classes: Object }) =>
       </div>
     </div>
     <ModalExample />
-  </div>
+  </div>;
 
-export default injectSheet(styles)(HomePage)
+export default injectSheet(styles)(HomePage);

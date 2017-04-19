@@ -9,15 +9,16 @@
   ],
   "engines": {
     "node": "7.x",
-    "yarn": "0.21.3"
+    "yarn": "0.20.3"
   },
   "scripts": {
     "start": "yarn dev:start",
     "dev:start": "nodemon -e js,jsx --ignore lib --ignore dist --exec babel-node src/server",
     "dev:wds": "webpack-dev-server --progress",
     "prod:build": "rimraf lib dist && babel src -d lib --ignore .test.js && cross-env NODE_ENV=production webpack -p --progress",
-    "prod:start": "cross-env NODE_ENV=production heroku local",
+    "prod:start": "heroku local",
     "lint": "eslint src webpack.config.babel.js --ext .js,.jsx",
+    "fixlint": "npm run lint -- --fix",
     "test": "yarn lint && flow && jest --coverage",
     "heroku-postbuild": "yarn prod:build",
     "precommit": "yarn test",
@@ -32,7 +33,7 @@
     "immutable": "^4.0.0-rc.1",
     "isomorphic-fetch": "^2.2.1",
     "jquery": "^3.1.1",
-    "mongoose": "^4.9.0",
+    "mongoose": "^4.9.5",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-helmet": "^4.0.0",
@@ -44,7 +45,6 @@
     "redux": "^3.6.0",
     "redux-actions": "^2.0.1",
     "redux-thunk": "^2.2.0",
-    "serve-favicon": "^2.4.1",
     "socket.io": "^1.7.3",
     "socket.io-client": "^1.7.3",
     "tether": "^1.4.0"

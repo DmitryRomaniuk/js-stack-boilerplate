@@ -1,12 +1,12 @@
 // @flow
 
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from 'react';
+import Helmet from 'react-helmet';
 
-import Message from '../../container/message'
-import HelloButton from '../../container/hello-button'
+import Message from '../../container/message';
+import HelloButton from '../../container/hello-button';
 
-const title = 'Hello Page'
+const title = 'Hello Page';
 
 const HelloPage = () =>
   <div className="container mt-4">
@@ -24,6 +24,6 @@ const HelloPage = () =>
         <HelloButton />
       </div>
     </div>
-  </div>
+  </div>;
 
-export default HelloPage
+export default HelloPage;

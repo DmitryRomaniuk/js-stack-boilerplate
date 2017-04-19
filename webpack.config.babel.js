@@ -1,9 +1,10 @@
 // @flow
 
-import path from 'path'
-import webpack from 'webpack'
+import path from 'path';
+import webpack from 'webpack';
 
-import { WDS_PORT, isProd } from './src/shared/config'
+import { WDS_PORT } from './src/shared/config';
+import { isProd } from './src/shared/util';
 
 export default {
   entry: [
@@ -34,4 +35,4 @@ export default {
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
   ],
-}
+};

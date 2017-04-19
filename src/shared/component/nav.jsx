@@ -1,20 +1,20 @@
 // @flow
 
-import $ from 'jquery'
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import { APP_NAME } from '../config'
+import $ from 'jquery';
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { APP_NAME } from '../config';
 import {
   HOME_PAGE_ROUTE,
   HELLO_PAGE_ROUTE,
   HELLO_ASYNC_PAGE_ROUTE,
   NOT_FOUND_DEMO_PAGE_ROUTE,
-} from '../routes'
+} from '../routes';
 
 const handleNavLinkClick = () => {
-  $('body').scrollTop(0)
-  $('.js-navbar-collapse').collapse('hide')
-}
+  $('body').scrollTop(0);
+  $('.js-navbar-collapse').collapse('hide');
+};
 
 const Nav = () =>
   <nav className="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
@@ -36,6 +36,6 @@ const Nav = () =>
         ))}
       </ul>
     </div>
-  </nav>
+  </nav>;
 
-export default Nav
+export default Nav;

@@ -1,22 +1,22 @@
 // @flow
 
-import React from 'react'
-import { Switch } from 'react-router'
-import { Route } from 'react-router-dom'
-import Helmet from 'react-helmet'
+import React from 'react';
+import { Switch } from 'react-router';
+import { Route } from 'react-router-dom';
+import Helmet from 'react-helmet';
 
-import HelloPage from './component/page/hello'
-import HelloAsyncPage from './component/page/hello-async'
-import HomePage from './component/page/home'
-import Footer from './component/footer'
-import Nav from './component/nav'
-import NotFoundPage from './component/page/not-found'
-import { APP_NAME } from './config'
+import HelloPage from './component/page/hello';
+import HelloAsyncPage from './component/page/hello-async';
+import HomePage from './component/page/home';
+import Footer from './component/footer';
+import Nav from './component/nav';
+import NotFoundPage from './component/page/not-found';
+import { APP_NAME } from './config';
 import {
   HOME_PAGE_ROUTE,
   HELLO_PAGE_ROUTE,
   HELLO_ASYNC_PAGE_ROUTE,
-} from './routes'
+} from './routes';
 
 const App = () =>
   <div style={{ paddingTop: 54 }}>
@@ -29,6 +29,6 @@ const App = () =>
       <Route component={NotFoundPage} />
     </Switch>
     <Footer />
-  </div>
+  </div>;
 
-export default App
+export default App;

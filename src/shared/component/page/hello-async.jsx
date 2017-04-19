@@ -1,12 +1,12 @@
 // @flow
 
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from 'react';
+import Helmet from 'react-helmet';
 
-import MessageAsync from '../../container/message-async'
-import HelloAsyncButton from '../../container/hello-async-button'
+import MessageAsync from '../../container/message-async';
+import HelloAsyncButton from '../../container/hello-async-button';
 
-const title = 'Async Hello Page'
+const title = 'Async Hello Page';
 
 const HelloAsyncPage = () =>
   <div className="container mt-4">
@@ -24,6 +24,6 @@ const HelloAsyncPage = () =>
         <HelloAsyncButton />
       </div>
     </div>
-  </div>
+  </div>;
 
-export default HelloAsyncPage
+export default HelloAsyncPage;

@@ -12,7 +12,7 @@
     "yarn": "0.20.3"
   },
   "scripts": {
-    "start": "yarn dev:start",
+    "start": "npm run dev:start",
     "dev:start": "nodemon -e js,jsx --ignore lib --ignore dist --exec babel-node src/server",
     "dev:wds": "webpack-dev-server --progress",
     "prod:build": "rimraf lib dist && babel src -d lib --ignore .test.js && cross-env NODE_ENV=production webpack -p --progress",
@@ -27,6 +27,7 @@
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "bootstrap": "4.0.0-alpha.6",
+    "classnames": "^2.2.5",
     "compression": "^1.6.2",
     "dotenv": "^4.0.0",
     "express": "^4.15.0",
@@ -38,7 +39,7 @@
     "react-dom": "^15.4.2",
     "react-helmet": "^4.0.0",
     "react-hot-loader": "^3.0.0-beta.6",
-    "react-jss": "^5.3.0",
+    "react-jss": "^6.1.1",
     "react-redux": "^5.0.3",
     "react-router": "4.1.1",
     "react-router-dom": "4.1.1",

@@ -5,7 +5,6 @@ import React from 'react';
 import injectSheet from 'react-jss';
 import classNames from 'classnames';
 import { Link, NavLink } from 'react-router-dom';
-import { APP_NAME } from '../config';
 import {
   HOME_PAGE_ROUTE,
   SUPER_SPORT_ROUTE,
@@ -16,9 +15,6 @@ import {
   OFF_ROAD_ROUTE,
   SCOOTER_ROUTE,
   ATV_ROUTE,
-  HELLO_PAGE_ROUTE,
-  HELLO_ASYNC_PAGE_ROUTE,
-  NOT_FOUND_DEMO_PAGE_ROUTE,
 } from '../routes';
 
 const styles = {
@@ -38,7 +34,7 @@ const Nav = ({ classes }: { classes: Object }) =>
       <span className="navbar-toggler-icon" />
     </button>
     <Link to={HOME_PAGE_ROUTE} className={classNames({ 'navbar-brand': true, [classes.navbar_brand_icon]: true })}>
-      &nbsp;{APP_NAME}
+      &nbsp;
     </Link>
     <div className="js-navbar-collapse collapse navbar-collapse">
       <ul className="navbar-nav mr-auto">
@@ -52,9 +48,6 @@ const Nav = ({ classes }: { classes: Object }) =>
           { route: OFF_ROAD_ROUTE, label: 'Off road' },
           { route: SCOOTER_ROUTE, label: 'Scooter' },
           { route: ATV_ROUTE, label: 'ATV' },
-          { route: HELLO_PAGE_ROUTE, label: 'Say Hello' },
-          { route: HELLO_ASYNC_PAGE_ROUTE, label: 'Say Hello Asynchronously' },
-          { route: NOT_FOUND_DEMO_PAGE_ROUTE, label: '404 Demo' },
         ].map(link => (
           <li className="nav-item" key={link.route}>
             <NavLink to={link.route} className="nav-link" activeStyle={{ color: 'white' }} exact onClick={handleNavLinkClick}>{link.label}</NavLink>

@@ -2,17 +2,16 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-
-import Message from '../../container/message';
-import HelloButton from '../../container/hello-button';
+import { STATIC_PATH } from '../../config';
 
 type Props = {
     route: string,
+    motoList: Object
 }
 
 const title = 'Hello Page';
 
-const TypeMotocycles = ({ route }: Props) =>
+const TypeMotocycles = ({ route, motoList }: Props) =>
   <div className="container mt-4">
     <Helmet
       title={title}
@@ -23,11 +22,24 @@ const TypeMotocycles = ({ route }: Props) =>
     />
     <div className="row">
       <div className="col-12">
-        <h1>{title}</h1>
-        <h2>{route}</h2>
-        <Message />
-        <HelloButton />
+        {motoList.name}
       </div>
+    </div>
+    <div className="row">
+      {motoList.motos.map(moto => (
+        <div className="col-xs-12 col-sm-12 col-md-4 col-lg-2" key={moto.name}>
+          <div className="item">
+            <div className="row">
+              <a href={route + '/' + moto.name} className="image">
+                <img src={STATIC_PATH + '/img/archive/' + moto.image} alt={moto.name} height="110" />
+              </a>
+            </div>
+            <div className="row">
+              <a href={route + '/' + moto.name} className="name"><span>{moto.name}</span></a>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   </div>;
 

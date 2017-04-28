@@ -18,7 +18,7 @@ charset = utf-8
 indent_style = tab
 
 # Indentation override for all JS under lib directory
-[e2e/**.js]
+[e2e/**.{js,jsx}]
 indent_style = space
 indent_size = 2
 

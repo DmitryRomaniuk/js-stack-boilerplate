@@ -21,6 +21,15 @@ const styles = {
     justifyContent: 'center',
     fontFamily: 'ProximaLight',
     fontSize: '2rem',
+    margin: '10px',
+  },
+  motoLink: {
+    fontFamily: 'ProximaSbold',
+    color: 'white',
+    margin: '10px',
+    '&:hover': {
+      color: 'white',
+    },
   },
 };
 
@@ -43,7 +52,7 @@ const HomeTypeOverview = ({ type, moto, classes }: {type: string, moto: Object, 
             <span>{moto.description}</span>
           </div>
           <div className={classes.motoAlignOverview}>
-            <a href={type} className="name"><span>{moto.name}</span></a>
+            <a href={type} className={classes.motoLink}><span>{moto.name}</span></a>
           </div>
         </div>
       </div>

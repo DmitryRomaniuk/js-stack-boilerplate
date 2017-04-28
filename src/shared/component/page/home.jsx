@@ -27,11 +27,15 @@ const styles = {
   motoTypesOverview: {
     color: 'white',
     backgroundColor: '#292b2c',
+    border: '1px solid transparent',
   },
   motoTypesEach: {
     composes: ['row'],
     margin: '50px',
     borderBottom: '1px solid white',
+    '&:last-child': {
+      borderBottom: '1px solid transparent',
+    },
   },
   jumbotron: {
     composes: ['jumbotron'],

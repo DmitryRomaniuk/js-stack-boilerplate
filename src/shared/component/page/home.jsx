@@ -31,7 +31,7 @@ const styles = {
   },
   motoTypesEach: {
     composes: ['row'],
-    margin: '50px',
+    margin: '20px',
     borderBottom: '1px solid white',
     '&:last-child': {
       borderBottom: '1px solid transparent',
@@ -40,6 +40,7 @@ const styles = {
   jumbotron: {
     composes: ['jumbotron'],
     backgroundColor: '#f4f3f8',
+    marginBottom: '0px',
   },
   'jumbotron-text': {
     fontFamily: 'ProximaLight',
@@ -74,36 +75,40 @@ const HomePage = ({ classes }: { classes: Object }) =>
           <div className={classes['jumbotron-text-banner']}>RIDE YOUR DREAM</div>
         </div>
         <div className="row">
-          <div className={classes['jumbotron-text']}><span>In 1947 Soichiro Honda found a dream could be real. Where will you find yours?</span></div>
-        </div>
-      </div>
-    </div>
-    <div className="container">
-      <div className="row">
-        <div className="col-md-4 mb-4">
-          <h3 className="mb-3">Bootstrap</h3>
-          <p>
-            <button type="button" role="button" data-toggle="modal" data-target=".js-modal-example" className="btn btn-primary">Open Modal</button>
-          </p>
-        </div>
-        <div className="col-md-4 mb-4">
-          <h3 className="mb-3">JSS</h3>
-          <p className={classes.hoverMe}>Hover me.</p>
-          <p className={classes.resizeMe}>Resize the window.</p>
-          <button className={classes.specialButton}>Composition</button>
-        </div>
-        <div className="col-md-4 mb-4">
-          <h3 className="mb-3">Websockets</h3>
-          <p>Open your browser console.</p>
+          <div className={classes['jumbotron-text']}><span>In 1947 Soichiro Honda found a dream could be real. Where will you find yours?</span>
+          </div>
         </div>
       </div>
     </div>
     <div className={classes.motoTypesOverview}>
-      <div className={classes.motoTypesEach}>
-        <HomeTypeOverview type="super-sport" moto={listMotoOverview.SUPER_SPORT} />
-      </div>
-      <div className={classes.motoTypesEach}>
-        <HomeTypeOverview type="super-touring" moto={listMotoOverview.SPORT_TOURING} />
+      <div className="container">
+        <div className={classes.motoTypesEach}>
+          <HomeTypeOverview type="super-sport" moto={listMotoOverview.SUPER_SPORT} />
+        </div>
+        <div className={classes.motoTypesEach}>
+          <HomeTypeOverview type="sport-touring" moto={listMotoOverview.SPORT_TOURING} />
+        </div>
+        <div className={classes.motoTypesEach}>
+          <HomeTypeOverview type="touring" moto={listMotoOverview.TOURING} />
+        </div>
+        <div className={classes.motoTypesEach}>
+          <HomeTypeOverview type="adventure" moto={listMotoOverview.ADVENTURE} />
+        </div>
+        <div className={classes.motoTypesEach}>
+          <HomeTypeOverview type="street" moto={listMotoOverview.STREET} />
+        </div>
+        <div className={classes.motoTypesEach}>
+          <HomeTypeOverview type="super-touring" moto={listMotoOverview.CUSTOM} />
+        </div>
+        <div className={classes.motoTypesEach}>
+          <HomeTypeOverview type="super-touring" moto={listMotoOverview.v125CC} />
+        </div>
+        <div className={classes.motoTypesEach}>
+          <HomeTypeOverview type="off-road" moto={listMotoOverview.OFF_ROAD} />
+        </div>
+        <div className={classes.motoTypesEach}>
+          <HomeTypeOverview type="scooter" moto={listMotoOverview.SCOOTER} />
+        </div>
       </div>
     </div>
     <ModalExample />

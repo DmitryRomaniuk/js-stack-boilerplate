@@ -7,6 +7,7 @@ import { STATIC_PATH } from '../config';
 const styles = {
   title: {
     composes: ['col-12'],
+    margin: '10px',
     fontFamily: 'PFSExtraBlack',
     fontSize: '2rem',
   },
@@ -14,6 +15,11 @@ const styles = {
     composes: ['row'],
     display: 'flex',
     justifyContent: 'center',
+    '& img': {
+      width: '100%',
+      maxWidth: '100%',
+      height: 'auto',
+    },
   },
   description: {
     composes: ['row'],
@@ -45,7 +51,7 @@ const HomeTypeOverview = ({ type, moto, classes }: {type: string, moto: Object, 
         <div className="item">
           <div className={classes.motoAlignOverview}>
             <a href={type} className="image">
-              <img src={STATIC_PATH + '/img/home/overview/' + moto.image} alt={moto.name} height="400" />
+              <img src={STATIC_PATH + '/img/home/overview/' + moto.image} alt={moto.name} />
             </a>
           </div>
           <div className={classes.description}>
